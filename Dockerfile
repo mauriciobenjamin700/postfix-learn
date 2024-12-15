@@ -16,7 +16,7 @@ COPY ./configs/sasl_passwd /etc/postfix/sasl_passwd
 RUN postmap /etc/postfix/main.cf
 RUN postmap /etc/postfix/sasl_passwd
 
-CMD ["service", "postfix", "restart"]
+#CMD ["service", "postfix", "restart"]
 
 # Keep the container running
-#CMD ["tail", "-f", "/dev/null"]
+CMD ["tail", "-f", "/dev/null"]
